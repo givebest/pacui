@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { PButton, PBreadcrumb, PCheckbox, PDivider } from './components/index'
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+
+        <PButton type="primary">PButton</PButton>
+
+        <PDivider></PDivider>
+
+        <PBreadcrumb>
+          <PBreadcrumb.Item>Home</PBreadcrumb.Item>
+          <PBreadcrumb.Item><a href="">Application Center</a></PBreadcrumb.Item>
+          <PBreadcrumb.Item><a href="">Application List</a></PBreadcrumb.Item>
+          <PBreadcrumb.Item>An Application</PBreadcrumb.Item>
+        </PBreadcrumb>
+
+        <PDivider></PDivider>
+
+        <PCheckbox>Checkbox</PCheckbox>
+
+
       </div>
     );
   }
